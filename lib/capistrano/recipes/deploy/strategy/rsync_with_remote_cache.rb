@@ -60,7 +60,7 @@ module Capistrano
         end
 
         def rsync_command_for(server)
-          "rsync #{rsync_options} --rsh='ssh -p #{ssh_port(server)} #{rsync_ssh_options}' '#{local_cache_path}/' #{rsync_host(server)}:#{repository_cache_path}/"
+          "sshpass -p '#{password}'' rsync #{rsync_options} --rsh='ssh -p #{ssh_port(server)} #{rsync_ssh_options}' '#{local_cache_path}/' #{rsync_host(server)}:#{repository_cache_path}/"
         end
 
         def mark_local_cache
@@ -92,7 +92,7 @@ module Capistrano
           FileUtils.rm_rf(local_cache_path)
         end
 
-        def remove_cache_if_repository_url_changed
+        def remove_local_cache_if_repository_url_changed
           remove_local_cache if repository_url_changed?
         end
 
@@ -115,6 +115,7 @@ module Capistrano
           super.check do |check|
             check.local.command(source.command)
             check.local.command('rsync')
+            check.local.command('sshpass')
             check.remote.command('rsync')
           end
         end
@@ -122,6 +123,9 @@ module Capistrano
         private
 
         def command
+          if local_cache_exists?
+            remove_local_cache_if_repository_url_changed
+          end
           if local_cache_valid?
             source.sync(revision, local_cache_path)
           elsif !local_cache_exists?
