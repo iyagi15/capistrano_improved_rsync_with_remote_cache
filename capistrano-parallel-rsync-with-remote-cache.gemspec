@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gem|
-  gem.name          = "capistrano-parallel-rsync-with-remote-cache"
+  gem.name          = "capistrano-rsync-remote-cache"
   gem.version       = "1.0.0"
   gem.authors       = ["Yeongseok"]
   gem.email         = ["iyagi15@gmail.com"]
-  gem.homepage      = "https://github.com/iyagi15/capistrano_parallel_rsync_with_remote_cache"
+  gem.homepage      = "https://github.com/iyagi15/capistrano_rsync_remote_cache"
   gem.summary       = %q{Improved version of rsync-with-remote-cache deployment strategy.}
   gem.description   = %q{Improved version of rsync-with-remote-cache deployment strategy.}
 
