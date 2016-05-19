@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name          = "capistrano-rsync-remote-cache"
-  gem.version       = "1.0.0"
+  gem.version       = "1.0.1"
   gem.authors       = ["Yeongseok"]
   gem.email         = ["iyagi15@gmail.com"]
   gem.homepage      = "https://github.com/iyagi15/capistrano_rsync_remote_cache"
