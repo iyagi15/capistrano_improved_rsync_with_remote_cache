@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in capistrano-scm-passthrough.gemspec
+gem 'net-ssh', '>=2.7.0'
+
 gemspec
