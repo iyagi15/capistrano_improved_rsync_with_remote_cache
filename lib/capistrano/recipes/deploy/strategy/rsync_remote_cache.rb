@@ -5,7 +5,7 @@ require 'parallel'
 module Capistrano
   module Deploy
     module Strategy
-      class RsyncWithRemoteCache < Remote
+      class RsyncRemoteCache < Remote
 
         class InvalidCacheError < Exception; end
         class RsyncFailedError < Exception; end
