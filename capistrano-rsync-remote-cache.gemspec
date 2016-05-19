@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.licenses      = ["MIT"]
+
   gem.add_runtime_dependency 'capistrano', '~> 2.4', '>= 2.4.0'
   gem.add_runtime_dependency 'parallel', '~> 0.0', '>= 0.0.0'
 end
