@@ -16,4 +16,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('capistrano', '>=2.4.0')
   gem.add_dependency('parallel', '>=0.0.0')
+  gem.add_dependency('net-ssh', '>=2.7.0')
 end
