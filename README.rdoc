@@ -1,4 +1,4 @@
-= Capistrano 2.0 parallel_rsync_with_remote_cache Deployment Strategy
+= Capistrano 2.0 rsync_remote_cache Deployment Strategy
 
 == Description
 
@@ -17,13 +17,13 @@ For the original gem, visit: https://github.com/vigetlabs/capistrano_rsync_with_
 
 == Installation
 
-    gem install capistrano-parallel-rsync-with-remote-cache
+    gem install capistrano-rsync-remote-cache
 
 == Usage
 
 To use this deployment strategy, add this line to your <tt>deploy.rb</tt> file:
 
-    set :deploy_via, :parallel_rsync_with_remote_cache
+    set :deploy_via, :rsync_remote_cache
 
 If you want to enable the parallel deployment:
 
